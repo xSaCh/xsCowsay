@@ -56,6 +56,7 @@ func main() {
 	if (stat.Mode() & os.ModeCharDevice) != 0 {
 		fmt.Println("xsCowsay only works with stdin pipes.")
 		fmt.Println("Usage: echo \"Hello\" | xsaCowsay")
+		os.Exit(1)
 	}
 
 	var lines []string
